@@ -15,7 +15,15 @@ FROM alpine:3.13
 
 LABEL org.opencontainers.image.source https://github.com/helmfile/helmfile
 
-RUN apk add --no-cache ca-certificates git bash curl jq openssh-client
+RUN apk add --no-cache \
+    ca-certificates \
+    git \
+    bash \
+    curl \
+    jq \
+    openssh-client \
+    figlet \
+    gnupg
 
 ARG HELM_VERSION="v3.8.2"
 ARG HELM_SHA256="6cb9a48f72ab9ddfecab88d264c2f6508ab3cd42d9c09666be16a7bf006bed7b"
